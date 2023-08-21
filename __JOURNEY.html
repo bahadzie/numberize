@@ -47,6 +47,7 @@
       <small class="dont-index">Source: <a href="https://github.com/bahadzie/numberizeR/blob/HEAD/__JOURNEY.md" class="external-link"><code>__JOURNEY.md</code></a></small>
     </div>
 
+
 <div id="create-a-package-using-epiversepackagetemplate" class="section level1">
 
 <ul><li>Go to <a href="https://github.com/epiverse-trace/packagetemplate" class="external-link">epiverse-trace/packagetemplate</a> on GH</li>
@@ -62,6 +63,15 @@
 <li>Start developing</li>
 <li>Replace <code>packagetemplate</code> with <code>your package name</code> in the <code>tests/testthat.R</code> file</li>
 </ul></div>
+<div class="section level1">
+<h1 id="various-readme-fixes">Various README fixes<a class="anchor" aria-label="anchor" href="#various-readme-fixes"></a></h1>
+<ul><li>Codecov, sign up for an account then follow <a href="https://docs.codecov.com/docs/github-2-getting-a-codecov-account-and-uploading-coverage" class="external-link">these instructions</a> to set it up</li>
+<li>Recon. Used <a href="https://www.reconverse.org/images/badge-experimental.svg" class="external-link">this image</a> instead of the repo image which appear broken but that might have been temporary.</li>
+<li>Updated <code>render_readme.yml</code> by adding trailing <code>--</code> to <code>git diff-index --quiet HEAD --</code> line 87. Based on <a href="https://stackoverflow.com/questions/28296130/what-does-this-git-diff-index-quiet-head-mean" class="external-link">SO reference</a>
+</li>
+<li>Also found in the GH Action logs that the script didn’t have permission to commit the build README.md file to the repo. This was fixed by allowing workflow permission to be read/write in GH repo &gt; Actions &gt; General (scroll to bottom)</li>
+</ul></div>
+
 
   </main></div>
 
