@@ -72,12 +72,12 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header">
-<img src="logo.svg" class="logo" alt=""><h1 id="id_-packagename--">{{ packagename }} <a class="anchor" aria-label="anchor" href="#id_-packagename--"></a>
+<img src="logo.svg" class="logo" alt=""><h1 id="id_-descdesc_getpackage--">{{ desc::desc_get(“Package”) }} <a class="anchor" aria-label="anchor" href="#id_-descdesc_getpackage--"></a>
 </h1>
 </div>
 <!-- badges: start -->
 
-<p>{{ packagename }} provides functions to ….</p>
+<p><em>{{ packagename }}</em> is an R package to convert whole numbers written as words from zero to nine hundred and ninety nine trillion, nine hundred and ninety nine billion, nine hundred and ninety nine million, nine hundred and ninety nine thousand, nine hundred and ninety nine in English, French and Spanish from a character string to a numeric value.</p>
 <!-- This sentence is optional and can be removed -->
 <p>{{ packagename }} is developed at the <a href="url">CENTER|similar</a> at the <a href="url">UNIVERSITY|similar</a> as part of the <a href="https://data.org/initiatives/epiverse/" class="external-link">Epiverse-TRACE program</a>.</p>
 <div class="section level2">
@@ -92,6 +92,17 @@
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
 <p>These examples illustrate some of the current functionalities</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">load_all</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/formatc.html" class="external-link">formatC</a></span><span class="op">(</span><span class="fu"><a href="reference/numberize.html">numberize</a></span><span class="op">(</span><span class="st">"nine hundred and ninety-nine trillion, nine hundred and ninety-nine billion, nine hundred and ninety-nine million, nine hundred and ninety-nine thousand, nine hundred and ninety-nine"</span><span class="op">)</span>, big.mark <span class="op">=</span> <span class="st">","</span>, format <span class="op">=</span> <span class="st">"fg"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; "999,999,999,999,999"</span></span>
+<span>    </span>
+<span><span class="fu"><a href="reference/numberize.html">numberize</a></span><span class="op">(</span><span class="st">"Siete mil quinientos cuarenta y cinco"</span>, lang <span class="op">=</span> <span class="st">"es"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; 7545</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/numberize.html">numberize</a></span><span class="op">(</span><span class="st">"zéro"</span>,  lang <span class="op">=</span> <span class="st">"fr"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; 0</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="development">Development<a class="anchor" aria-label="anchor" href="#development"></a>
@@ -99,7 +110,7 @@
 <div class="section level3">
 <h3 id="lifecycle">Lifecycle<a class="anchor" aria-label="anchor" href="#lifecycle"></a>
 </h3>
-<p>This package is currently a <em>concept</em>, as defined by the <a href="https://www.reconverse.org/lifecycle.html" class="external-link">RECON software lifecycle</a>. This means that essential features and mechanisms are still being developed, and the package is not ready for use outside of the development team.</p>
+<p>This package is currently <em>experimental</em>, as defined by the <a href="https://www.reconverse.org/lifecycle.html" class="external-link">RECON software lifecycle</a>. This means it is a draft of a functional package, but interfaces and functionalities may change over time, testing and documentation maye be lacking.</p>
 </div>
 <div class="section level3">
 <h3 id="contributions">Contributions<a class="anchor" aria-label="anchor" href="#contributions"></a>
