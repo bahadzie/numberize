@@ -98,17 +98,21 @@
 </h2>
 <p>These examples illustrate the current functionality.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># pak::pak("devtools")</span></span>
+<code class="sourceCode R"><span><span class="co"># library("numberizeR")</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">load_all</span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">#&gt; ℹ Loading numberizeR</span></span>
 <span></span>
+<span><span class="co"># numberize the French string "zéro"</span></span>
 <span><span class="fu"><a href="reference/numberize.html">numberize</a></span><span class="op">(</span><span class="st">"zéro"</span>,  lang <span class="op">=</span> <span class="st">"fr"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 0</span></span>
-<span>    </span>
-<span><span class="fu"><a href="reference/numberize.html">numberize</a></span><span class="op">(</span><span class="st">"Siete mil quinientos cuarenta y cinco"</span>, lang <span class="op">=</span> <span class="st">"es"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 7545</span></span>
+<span><span class="co">#&gt; [1] 0</span></span>
 <span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/formatc.html" class="external-link">formatC</a></span><span class="op">(</span><span class="fu"><a href="reference/numberize.html">numberize</a></span><span class="op">(</span><span class="st">"nine hundred and ninety-nine trillion, nine hundred and ninety-nine billion, nine hundred and ninety-nine million, nine hundred and ninety-nine thousand, nine hundred and ninety-nine"</span><span class="op">)</span>, big.mark <span class="op">=</span> <span class="st">","</span>, format <span class="op">=</span> <span class="st">"fg"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; "999,999,999,999,999"</span></span></code></pre></div>
+<span><span class="co"># numberize the Spanish string "Siete mil quinientos cuarenta y cinco"</span></span>
+<span><span class="fu"><a href="reference/numberize.html">numberize</a></span><span class="op">(</span><span class="st">"Siete mil quinientos cuarenta y cinco"</span>, lang <span class="op">=</span> <span class="st">"es"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 7545</span></span>
+<span></span>
+<span><span class="co"># numberize the English string "nine hundred and ninety-nine trillion, nine hundred and ninety-nine billion, nine hundred and ninety-nine million, nine hundred and ninety-nine thousand, nine hundred and ninety-nine" # nolint: line_length_linter.</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/formatc.html" class="external-link">formatC</a></span><span class="op">(</span><span class="fu"><a href="reference/numberize.html">numberize</a></span><span class="op">(</span><span class="st">"nine hundred and ninety-nine trillion, nine hundred and ninety-nine billion, nine hundred and ninety-nine million, nine hundred and ninety-nine thousand, nine hundred and ninety-nine"</span><span class="op">)</span>, big.mark <span class="op">=</span> <span class="st">","</span>, format <span class="op">=</span> <span class="st">"fg"</span><span class="op">)</span> <span class="co"># nolint: line_length_linter.</span></span>
+<span><span class="co">#&gt; [1] "999,999,999,999,999"</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="development">Development<a class="anchor" aria-label="anchor" href="#development"></a>
