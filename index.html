@@ -76,31 +76,42 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header">
-<img src="logo.svg" class="logo" alt=""><h1 id="id_-packagename--">
-<em>{{ packagename }}</em> <a class="anchor" aria-label="anchor" href="#id_-packagename--"></a>
+<img src="logo.svg" class="logo" alt=""><h1 id="numberizer-">
+<em>numberizeR</em> <a class="anchor" aria-label="anchor" href="#numberizer-"></a>
 </h1>
 </div>
 <!-- badges: start -->
 
-<p><em>{{ packagename }}</em> is an R package to convert numbers written as English, French or Spanish words from <code>"zero"</code> to <code>"nine hundred and ninety nine trillion, nine hundred and ninety nine billion, nine hundred and ninety nine million, nine hundred and ninety nine thousand, nine hundred and ninety nine"</code> from a character string to a numeric value.</p>
+<p><em>numberizeR</em> is an R package to convert numbers written as English, French or Spanish words from <code>"zero"</code> to <code>"nine hundred and ninety nine trillion, nine hundred and ninety nine billion, nine hundred and ninety nine million, nine hundred and ninety nine thousand, nine hundred and ninety nine"</code> from a character string to a numeric value.</p>
 <!-- This sentence is optional and can be removed -->
-<p><em>{{ packagename }}</em> is developed at the <a href="%7B%7B%20department_url%20%7D%7D">{{ department }}</a> at the {{ institution }} as part of the <a href="https://data.org/initiatives/epiverse/" class="external-link">Epiverse-TRACE program</a>.</p>
+<p><em>numberizeR</em> is developed at the <a href="https://www.lshtm.ac.uk/research/centres/centre-mathematical-modelling-infectious-diseases" class="external-link">Centre for the Mathematical Modelling of Infectious Diseases</a> at the London School of Hygiene and Tropical Medicine as part of the <a href="https://data.org/initiatives/epiverse/" class="external-link">Epiverse-TRACE program</a>.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of <em>{{ packagename }}</em> from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<p>You can install the development version of <em>numberizeR</em> from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
-<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="http://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"{{ gh_repo }}"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="http://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"bahadzie/numberizeR"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; → Will update 1 package.</span></span>
+<span><span class="co">#&gt; → The package (0 B) is cached.</span></span>
+<span><span class="co">#&gt; + numberizeR 0.0.1 → 0.0.1 [bld][cmp] (GitHub: d8f2e63)</span></span>
+<span><span class="co">#&gt; ℹ No downloads are needed, 1 pkg is cached</span></span>
+<span><span class="co">#&gt; ✔ Got numberizeR 0.0.1 (source) (31.02 kB)</span></span>
+<span><span class="co">#&gt; ℹ Packaging numberizeR 0.0.1</span></span>
+<span><span class="co">#&gt; ✔ Packaged numberizeR 0.0.1 (395ms)</span></span>
+<span><span class="co">#&gt; ℹ Building numberizeR 0.0.1</span></span>
+<span><span class="co">#&gt; ✔ Built numberizeR 0.0.1 (1.1s)</span></span>
+<span><span class="co">#&gt; ✔ Installed numberizeR 0.0.1 (github::bahadzie/numberizeR@d8f2e63) (36ms)</span></span>
+<span><span class="co">#&gt; ✔ 1 pkg: upd 1, dld 1 (NA B) [4.7s]</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://bahadzie.github.io/numberizeR/index.html" class="external-link">"numberizeR"</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
 <p>These examples illustrate the current functionality.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># library("numberizeR")</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">load_all</span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; ℹ Loading numberizeR</span></span>
+<code class="sourceCode R"><span><span class="co"># devtools::load_all()</span></span>
 <span></span>
 <span><span class="co"># numberize the French string "zéro"</span></span>
 <span><span class="fu"><a href="reference/numberize.html">numberize</a></span><span class="op">(</span><span class="st">"zéro"</span>,  lang <span class="op">=</span> <span class="st">"fr"</span><span class="op">)</span></span>
@@ -120,17 +131,17 @@
 <div class="section level3">
 <h3 id="lifecycle">Lifecycle<a class="anchor" aria-label="anchor" href="#lifecycle"></a>
 </h3>
-<p>This package is currently <em>{{ recon }}</em>, as defined by the <a href="https://www.reconverse.org/lifecycle.html" class="external-link">RECON software lifecycle</a>. &gt; {{ recon_description }}</p>
+<p>This package is currently <em>experimental</em>, as defined by the <a href="https://www.reconverse.org/lifecycle.html" class="external-link">RECON software lifecycle</a>. &gt; Draft of a functional package, but interfaces and functionalities may change over time, testing and documentation maye be lacking. Typically semantic version &lt; 0.1.0.RoxygenNote: 7.2.3</p>
 </div>
 <div class="section level3">
 <h3 id="contributions">Contributions<a class="anchor" aria-label="anchor" href="#contributions"></a>
 </h3>
-<p>Contributions are welcome via <a href="https://github.com/%7B%7B%20gh_repo%20%7D%7D/pulls" class="external-link">pull requests</a>.</p>
+<p>Contributions are welcome via <a href="https://github.com/bahadzie/numberizeR/pulls" class="external-link">pull requests</a>.</p>
 </div>
 <div class="section level3">
 <h3 id="code-of-conduct">Code of Conduct<a class="anchor" aria-label="anchor" href="#code-of-conduct"></a>
 </h3>
-<p>Please note that the <em>{{ packagename }}</em> project is released with a <a href="https://github.com/epiverse-trace/.github/blob/main/CODE_OF_CONDUCT.md" class="external-link">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+<p>Please note that the <em>numberizeR</em> project is released with a <a href="https://github.com/epiverse-trace/.github/blob/main/CODE_OF_CONDUCT.md" class="external-link">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
 </div>
 </div>
@@ -185,9 +196,9 @@
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://opensource.org/license/mit/" class="external-link"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a></li>
-<li><a href="https://github.com/%7B%7B%20gh_repo%20%7D%7D/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/%7B%7B%20gh_repo%20%7D%7D/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
-<li><a href="https://app.codecov.io/gh/%7B%7B%20gh_repo%20%7D%7D?branch=main" class="external-link"><img src="https://codecov.io/gh/%7B%7B%20gh_repo%20%7D%7D/branch/main/graph/badge.svg" alt="Codecov test coverage"></a></li>
-<li><a href="https://www.reconverse.org/lifecycle.html#%7B%7B%20recon%20%7D%7D" class="external-link"><img src="https://www.reconverse.org/images/badge-%7B%7B%20recon%20%7D%7D.svg" alt="lifecycle-{{ recon }}"></a></li>
+<li><a href="https://github.com/bahadzie/numberizeR/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/bahadzie/numberizeR/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://app.codecov.io/gh/bahadzie/numberizeR?branch=main" class="external-link"><img src="https://codecov.io/gh/bahadzie/numberizeR/branch/main/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://www.reconverse.org/lifecycle.html#experimental" class="external-link"><img src="https://www.reconverse.org/images/badge-experimental.svg" alt="lifecycle-experimental"></a></li>
 </ul>
 </div>
 
