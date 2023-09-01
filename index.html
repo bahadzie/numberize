@@ -91,19 +91,19 @@
 <p>You can install the development version of <em>numberize</em> from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
-<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="http://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"bahadzie/numberize"</span><span class="op">)</span></span>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"bahadzie/numberize"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; → Will update 1 package.</span></span>
 <span><span class="co">#&gt; → The package (0 B) is cached.</span></span>
-<span><span class="co">#&gt; + numberize 0.0.1 → 0.0.1 [bld][cmp] (GitHub: 220ba40)</span></span>
+<span><span class="co">#&gt; + numberize 0.0.1 → 0.0.1 [bld][cmp] (GitHub: b69827a)</span></span>
 <span><span class="co">#&gt; ℹ No downloads are needed, 1 pkg is cached</span></span>
-<span><span class="co">#&gt; ✔ Got numberize 0.0.1 (source) (30.84 kB)</span></span>
+<span><span class="co">#&gt; ✔ Got numberize 0.0.1 (source) (30.72 kB)</span></span>
 <span><span class="co">#&gt; ℹ Packaging numberize 0.0.1</span></span>
-<span><span class="co">#&gt; ✔ Packaged numberize 0.0.1 (336ms)</span></span>
+<span><span class="co">#&gt; ✔ Packaged numberize 0.0.1 (416ms)</span></span>
 <span><span class="co">#&gt; ℹ Building numberize 0.0.1</span></span>
-<span><span class="co">#&gt; ✔ Built numberize 0.0.1 (902ms)</span></span>
-<span><span class="co">#&gt; ✔ Installed numberize 0.0.1 (github::bahadzie/numberize@220ba40) (27ms)</span></span>
-<span><span class="co">#&gt; ✔ 1 pkg: upd 1, dld 1 (NA B) [3.8s]</span></span>
+<span><span class="co">#&gt; ✔ Built numberize 0.0.1 (1.1s)</span></span>
+<span><span class="co">#&gt; ✔ Installed numberize 0.0.1 (github::bahadzie/numberize@b69827a) (33ms)</span></span>
+<span><span class="co">#&gt; ✔ 1 pkg: upd 1, dld 1 (NA B) [5.2s]</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://bahadzie.github.io/numberizeR/index.html" class="external-link">"numberize"</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
@@ -111,17 +111,23 @@
 </h2>
 <p>These examples illustrate the current functionality.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># numberize the French string "zéro"</span></span>
+<code class="sourceCode R"><span><span class="co"># numberize a French string</span></span>
 <span><span class="fu"><a href="reference/numberize.html">numberize</a></span><span class="op">(</span><span class="st">"zéro"</span>,  lang <span class="op">=</span> <span class="st">"fr"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 0</span></span>
 <span></span>
-<span><span class="co"># numberize the Spanish string "Siete mil quinientos cuarenta y cinco"</span></span>
+<span><span class="co"># numberize a Spanish string</span></span>
 <span><span class="fu"><a href="reference/numberize.html">numberize</a></span><span class="op">(</span><span class="st">"Siete mil quinientos cuarenta y cinco"</span>, lang <span class="op">=</span> <span class="st">"es"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 7545</span></span>
 <span></span>
 <span><span class="co"># numberize the English string "nine hundred and ninety-nine trillion, nine hundred and ninety-nine billion, nine hundred and ninety-nine million, nine hundred and ninety-nine thousand, nine hundred and ninety-nine" # nolint: line_length_linter.</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/formatc.html" class="external-link">formatC</a></span><span class="op">(</span><span class="fu"><a href="reference/numberize.html">numberize</a></span><span class="op">(</span><span class="st">"nine hundred and ninety-nine trillion, nine hundred and ninety-nine billion, nine hundred and ninety-nine million, nine hundred and ninety-nine thousand, nine hundred and ninety-nine"</span><span class="op">)</span>, big.mark <span class="op">=</span> <span class="st">","</span>, format <span class="op">=</span> <span class="st">"fg"</span><span class="op">)</span> <span class="co"># nolint: line_length_linter.</span></span>
-<span><span class="co">#&gt; [1] "999,999,999,999,999"</span></span></code></pre></div>
+<span><span class="co">#&gt; [1] "999,999,999,999,999"</span></span>
+<span></span>
+<span><span class="co"># some edge cases</span></span>
+<span><span class="fu"><a href="reference/numberize.html">numberize</a></span><span class="op">(</span><span class="st">"veintiún"</span>, lang <span class="op">=</span> <span class="st">"es"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 21</span></span>
+<span><span class="fu"><a href="reference/numberize.html">numberize</a></span><span class="op">(</span><span class="st">"veintiuno"</span>, lang <span class="op">=</span> <span class="st">"es"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 21</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="development">Development<a class="anchor" aria-label="anchor" href="#development"></a>
