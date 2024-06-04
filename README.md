@@ -40,6 +40,14 @@ at the London School of Hygiene and Tropical Medicine as part of the
 
 ## Installation
 
+The package can be installed from CRAN using
+
+``` r
+install.packages("numberize")
+```
+
+### Development version
+
 You can install the development version of *numberize* from
 [GitHub](https://github.com/) with:
 

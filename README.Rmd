@@ -37,6 +37,14 @@ _{{ packagename }}_ is developed at the [{{ department }}]({{ department_url }})
 
 ## Installation
 
+The package can be installed from CRAN using
+
+```r
+install.packages("{{ packagename }}")
+```
+
+### Development version
+
 You can install the development version of _{{ packagename }}_ from
 [GitHub](https://github.com/) with:
 
